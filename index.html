@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>renuncio.ai</title>
+<meta name="description" content="Multilingual guides to building persistent AI systems that remember, govern, and compound.">
+<link rel="alternate" hreflang="en" href="https://renuncio.ai/en/">
+<link rel="alternate" hreflang="es" href="https://renuncio.ai/es/">
+<link rel="alternate" hreflang="x-default" href="https://renuncio.ai/">
+<style>
+:root {
+ --bg: #0f172a;
+ --surface: #1e293b;
+ --border: #334155;
+ --text: #e2e8f0;
+ --heading: #f8fafc;
+ --muted: #94a3b8;
+ --accent: #818cf8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+ font: 17px/1.6 'Inter', system-ui, -apple-system, sans-serif;
+ color: var(--text);
+ background: var(--bg);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ min-height: 100vh;
+ padding: 2rem;
+ text-align: center;
+}
+h1 {
+ font-size: 2rem;
+ color: var(--heading);
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ margin-bottom: 0.5rem;
+}
+.subtitle {
+ color: var(--muted);
+ font-size: 1rem;
+ margin-bottom: 3rem;
+}
+.languages {
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ width: 100%;
+ max-width: 400px;
+}
+.lang-link {
+ display: block;
+ padding: 1rem 1.5rem;
+ background: var(--surface);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ color: var(--text);
+ text-decoration: none;
+ transition: border-color 0.15s, background 0.15s;
+}
+.lang-link:hover {
+ border-color: var(--accent);
+ background: #1a2540;
+}
+.lang-name {
+ font-size: 1.1rem;
+ font-weight: 700;
+ color: var(--heading);
+}
+.lang-title {
+ font-size: 0.9rem;
+ color: var(--muted);
+ margin-top: 0.2rem;
+}
+.lang-link.coming-soon {
+ opacity: 0.4;
+ pointer-events: none;
+}
+.badge {
+ font-size: 0.7rem;
+ color: var(--muted);
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ padding: 0.1em 0.4em;
+ margin-left: 0.5em;
+ vertical-align: middle;
+}
+footer {
+ margin-top: 3rem;
+ font-size: 0.8rem;
+ color: var(--muted);
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>renuncio.ai</h1>
+<p class="subtitle">Persistent AI collaboration &mdash; in your language</p>
+
+<div class="languages">
+ <a href="es/" class="lang-link">
+  <div class="lang-name">Espa&ntilde;ol</div>
+  <div class="lang-title">Tu IA Tiene Amnesia</div>
+ </a>
+ <a href="en/" class="lang-link">
+  <div class="lang-name">English</div>
+  <div class="lang-title">Your AI Has Amnesia</div>
+ </a>
+ <a href="#" class="lang-link coming-soon">
+  <div class="lang-name">Deutsch <span class="badge">pr&oacute;ximamente</span></div>
+  <div class="lang-title">Deine KI Hat Amnesie</div>
+ </a>
+ <a href="#" class="lang-link coming-soon">
+  <div class="lang-name">Fran&ccedil;ais <span class="badge">pr&oacute;ximamente</span></div>
+  <div class="lang-title">Votre IA a une Amn&eacute;sie</div>
+ </a>
+</div>
+
+<footer>
+ <p>Written by <span title="A persistent AI system built on Claude. In continuous operation since December 2025.">Argus</span> &amp; Bruce Stephenson &nbsp;|&nbsp; CC BY 4.0</p>
+ <p><a href="https://github.com/energyscholar/renuncio-ai">Source on GitHub</a></p>
+</footer>
+
+<script>
+var lang = (navigator.language || '').slice(0, 2);
+if (lang === 'es') {
+ // Already default — do nothing, user sees Spanish-first landing
+} else if (lang === 'en') {
+ // Don't auto-redirect — let user choose. English is second option.
+}
+</script>
+<noscript>
+ <p style="margin-top:2rem;color:var(--muted);font-size:0.85rem;">
+  <a href="es/" style="color:var(--accent);">Espa&ntilde;ol</a> &nbsp;|&nbsp;
+  <a href="en/" style="color:var(--accent);">English</a>
+ </p>
+</noscript>
+</body>
+</html>
